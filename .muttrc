@@ -1,0 +1,14 @@
+set folder="$HOME/Maildir"
+set mask="!^\\.[^.]"
+set mbox_type="Maildir"
+set mbox="$HOME/Maildir"
+set spoolfile="$HOME/Maildir"
+set postponed="+.Drafts"
+set record="+.Sent
+
+set header_cache="~/.mutt/cache/headers"
+set message_cachedir="~/.mutt/cache/bodies"
+set certificate_file="~/.mutt/certificates
+
+set realname = "Michael Williams"
+set sort=reverse-threads

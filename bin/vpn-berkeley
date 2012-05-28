@@ -1,0 +1,1 @@
+sudo openconnect --script $HOME/bin/vpnc-script -u michael.williams --authgroup=2-Campus_VPN_Full_Tunnel ucbvpn.berkeley.edu
