@@ -1,7 +1,14 @@
 servers = (
   { address = "eu.irc6.net"; chatnet = "IRCnet"; port = "6667"; },
   { address = "open.ircnet.net"; chatnet = "IRCnet"; port = "6667"; },
-  { address = "irc.efnet.org"; chatnet = "EFNet"; port = "6667"; },
+  {
+    address = "ssl.efnet.org";
+    chatnet = "EFnet";
+    port = "9999";
+    use_ssl = "yes";
+    ssl_verify = "no";
+    autoconnect = "yes";
+  },
   { 
     address = "irc.undernet.org";
     chatnet = "Undernet";
@@ -26,6 +33,50 @@ servers = (
   {
     address = "irc.ocf.berkeley.edu";
     chatnet = "ocf";
+    port = "6697";
+    use_ssl = "yes";
+    ssl_verify = "no";
+    autoconnect = "yes";
+  },
+  {
+    address = "irc.freenode.net";
+    chatnet = "freenode";
+    port = "7000";
+    use_ssl = "yes";
+    ssl_verify = "no";
+    autoconnect = "yes";
+  },
+  {
+    address = "irc.distributed.net";
+    chatnet = "distributed";
+    port = "994";
+    use_ssl = "yes";
+    ssl_verify = "no";
+  },
+  {
+    address = "irc.indymedia.org";
+    chatnet = "indymedia";
+    port = "6697";
+    use_ssl = "yes";
+    ssl_verify = "no";
+  },
+  {
+    address = "irc.link-net.org";
+    chatnet = "link-net";
+    port = "7000";
+    use_ssl = "yes";
+    ssl_verify = "no";
+  },
+  {
+    address = "irc.theonering.net";
+    chatnet = "theonering";
+    port = "6697";
+    use_ssl = "yes";
+    ssl_verify = "no";
+  },
+  {
+    address = "irc.blackhatacademy.org";
+    chatnet = "blackhatacademy";
     port = "6697";
     use_ssl = "yes";
     ssl_verify = "no";
@@ -96,13 +147,31 @@ chatnets = {
     max_whois = "30";
   };
   SILC = { type = "SILC"; };
-  ocf = { type = "IRC"; };
+  ocf = {
+    type = "IRC";
+    nick = "dinosaur";
+    username = "mwilliams";
+    realname = "michael";
+  };
+  freenode = {
+    type = "IRC";
+    nick = "SirDinosaur";
+    realname = "Michael Williams";
+    autosendcmd = "/^msg NickServer identify moonbase1; wait 2000;";
+  };
+  academy = { type = "IRC"; nick = "ducksauce"; username = "ducksauce"; };
+  distributed = { type = "IRC"; };
+  indymedia = { type = "IRC"; };
+  "link-net" = { type = "IRC"; };
+  theonering = { type = "IRC"; };
+  blackhatacademy = { type = "IRC"; };
 };
 
 channels = (
-  { name = "#irssi"; chatnet = "ircnet"; autojoin = "No"; },
-  { name = "silc"; chatnet = "silc"; autojoin = "No"; },
-  { name = "#calsec"; chatnet = "ocf"; autojoin = "yes"; }
+  { name = "#calsec"; chatnet = "ocf"; autojoin = "yes"; },
+  { name = "#good-life"; chanet = "ocf"; autojoin = "yes"; },
+  { name = "#rebuild"; chatnet = "ocf"; autojoin = "yes"; },
+  { name = "#dc-949"; chatnet = "efnet"; autojoin = "yes"; }
 );
 
 aliases = {
@@ -267,6 +336,13 @@ statusbar = {
   };
 };
 settings = {
-  core = { real_name = ""; user_name = "dinosaur"; nick = "dinosaur"; };
+  core = {
+    real_name = "Michael Williams";
+    user_name = "michael";
+    nick = "dinosaur";
+    hostname = "dinosaur.io";
+  };
   "fe-text" = { actlist_sort = "refnum"; };
+  "fe-common/core" = { autolog = "yes"; };
 };
+logs = { };
