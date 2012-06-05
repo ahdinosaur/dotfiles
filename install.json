@@ -1,6 +1,6 @@
 {
  "activated": true,
- "path": "~/.home",
+ "path": "/home/michael/.home",
  "origin":"https://github.com/ahdinosaur/home",
  "branch": "master",
  "vcs": "/usr/bin/git"
