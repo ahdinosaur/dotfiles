@@ -1,0 +1,21 @@
+# install
+
+## script
+
+to install with a script,
+  
+  cd ~
+  git clone https://github.com/ahdinosaur/dotfiles.git
+  cd dotfiles/
+  cp -r ./ ../
+  cd ../
+  rm -rf dotfiles
+
+# cfengine
+
+to install with cfengine,
+
+  cf-sketch --install VCS::vcs_mirror
+  cf-sketch --activate VCS::vcs_mirror --params https://raw.github.com/ahdinosaur/dotfiles/master/install.json
+  cf-sketch --generate
+  cf-agent -KI -f ~/.cfagent/inputs/cf-sketch-runfile.cf
