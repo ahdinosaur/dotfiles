@@ -2,4 +2,4 @@
 
 ## install
 
-curl https://github.com/ahdinosaur/dotfiles/raw/master/install.sh | bash
+curl https://raw.github.com/ahdinosaur/dotfiles/master/install.sh | bash
